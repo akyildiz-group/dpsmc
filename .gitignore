@@ -1,0 +1,5 @@
+multirun/**
+outputs/**
+paper/**
+notebooks/**
+**/**/__pycache__/**

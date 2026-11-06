@@ -1,0 +1,9 @@
+name: "dpsmc_ou_rdsmc"
+
+n_aux_samples: 128
+n_mala_steps: 8
+n_steps: 124
+n_ais_steps: 32
+ess_threshold: 0.5
+lambda_0: 0.5
+n_ll_steps: 8

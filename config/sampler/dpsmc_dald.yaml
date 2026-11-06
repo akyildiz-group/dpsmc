@@ -1,0 +1,6 @@
+name: "dpsmc_dald"
+
+n_aux_samples: 128
+n_mala_steps: 1
+n_steps: 1024
+ess_threshold: 0.5

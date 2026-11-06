@@ -1,0 +1,24 @@
+defaults:
+  - _self_
+  - experiment: "sample"
+  - sampler: "dpsmc_dald"
+  - target: "gmm40_dim_2"
+
+device: "cuda:0"
+visible_devices: null
+seed: 0
+
+sampler:
+  n_samples: 4096
+  lambda_schedule: "cosine"
+  score_identity: "matrix_mcvsi"
+  device: "${device}"
+
+hydra:
+  help:
+    app_name: "Diffusion path sequential Monte Carlo"
+  run:
+    dir: "outputs/${experiment.name}/${now:%Y-%m-%d}/${now:%H-%M-%S_%f}"
+  sweep:
+    dir: "multirun/${experiment.name}/${now:%Y-%m-%d}/${now:%H-%M-%S_%f}"
+    subdir: ${hydra.job.num}
